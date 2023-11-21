@@ -1,0 +1,267 @@
+:root {
+    --blue : #12d2db;
+    --white : #fcf2fa;
+    --purple : #912a7eaa;
+    --purple-blc : #230622dd;
+    --shadow : 0 5px 10px 5px rgba(0, 0, 0, .3);
+    --navColor : linear-gradient(to right, rgba(178, 47, 147, .6)5%, rgba(35, 6, 34, .9)); 
+}
+
+* { 
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+nav {
+    background: var(--navColor);
+    box-shadow: var(--shadow);
+    height: 80px;
+    width: 100%;
+}
+
+label.logo {
+    color: var(--white);
+    font-size: 30px;
+    line-height: 80px;
+    padding: 0 80px;
+    letter-spacing: -1px;
+    font-weight: 800;
+    font-style: italic;
+    transition: .2s ease;
+    text-shadow: 3px 5px 20px #230622aa;
+}
+
+nav ul {
+    float: right;
+    margin-right: 80px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+}
+
+nav ul li a {
+    color: var(--white);
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 13px;
+    text-transform: lowercase;
+}
+
+a.active, a:hover {
+    background: var(--purple-blc);
+    transition: .5s;
+}
+
+.checkbtn {
+    line-height: 80px;
+    font-size: 30px;
+    float: right;
+    cursor: pointer;
+    margin-right: 40px;
+    display: none;
+}
+
+.checkbtn i {
+    color: var(--white);
+    padding: 5px;
+    border-radius: 10px;
+    transition: .5 ease;
+}
+
+.checkbtn i:hover {
+    background: var(--purple-blc);
+}
+
+#check {
+    display: none;
+}
+
+
+.hello {
+    font-size: 20px;
+    color: var(--white);
+    margin-top: 165px;
+    margin-left: 100px;
+}
+
+.hello1 {
+    font-size: 30px;
+    color: var(--white);
+    margin-top: 70px;
+    margin-left: 100px;
+    
+}
+
+
+.kedip {
+    display: flex;
+    margin-left: 90px;
+    font-size: 40px;
+}
+
+
+
+.kedip h1{
+    margin: 0%;
+    padding: 0%;
+    color: #111;
+}
+
+.kedip span{
+    display: table-cell;
+    margin: 5px;
+    animation: animate 1s ease infinite;
+}
+
+
+
+h1 span:nth-child(1)
+{
+    animation-delay: 0s;
+}
+h1 span:nth-child(2)
+{
+    animation-delay: 0.3s;
+}
+h1 span:nth-child(3)
+{
+    animation-delay: 0.6s;
+}
+h1 span:nth-child(4)
+{
+    animation-delay: 0.9s;
+}
+h1 span:nth-child(5)
+{
+    animation-delay: 1.2s;
+}
+h1 span:nth-child(6)
+{
+    animation-delay: 1.6s;
+}
+
+h1 span:nth-child(7)
+{
+    animation-delay: 1.9s;
+}
+
+h1 span:nth-child(8)
+{
+    animation-delay: 2.2s;
+}
+
+h1 span:nth-child(9)
+{
+    animation-delay: 2.6s;
+}
+
+h1 span:nth-child(10)
+{
+    animation-delay: 2.9s;
+}
+
+h1 span:nth-child(11)
+{
+    animation-delay: 3.2s;
+}
+
+h1 span:nth-child(12)
+{
+    animation-delay: 3.6s;
+}
+
+h1 span:nth-child(13)
+{
+    animation-delay: 3.9s;
+}
+
+h1 span:nth-child(14)
+{
+    animation-delay: 4.2s;
+}
+
+h1 span:nth-child(15)
+{
+    animation-delay: 3.6s;
+}
+
+
+@keyframes animate{
+    0%,100%{
+        color: #fff;
+        filter: blur(2px);
+        text-shadow: 0 0 10px #ff9d00,
+        0 0 20px #ff9d00,
+        0 0 400px #ff9d00,
+        0 0 80px #ff9d00,
+        0 0 120px #ff9d00,
+        0 0 200px #ff9d00,
+        0 0 300px #ff9d00,
+        0 0 400px #ff9d00;
+    }
+
+    5%,95%{
+        color: #111;
+        filter: blur(0px);
+        text-shadow: none;
+    }
+}
+
+@media (max-width: 952px) {
+    /*tablemode*/
+    label.logo {
+        font-size: 25px;
+        padding-left: 50px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 850px) {
+    /*phonemode*/
+    .checkbtn {
+        display: block;
+    }
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: var(--purple-blc);
+        top: 80px;
+        left: -100%;
+        padding-top: 80px;
+        text-align: center;
+        transition: .5s ease;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 30px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    a.active, a:hover {
+        background: none;
+        color: var(--blue);
+        text-shadow: 0 10px 15px var(--blue);
+    }
+
+    #check:checked ~ ul {
+        left: 0;
+    }
+}
