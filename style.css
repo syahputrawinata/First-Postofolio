@@ -16,6 +16,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
+    background-color: var(--purple-blc);
 }
 
 nav {
@@ -93,9 +94,9 @@ a.active, a:hover {
 }
 
 .hello1 {
-    font-size: 30px;
+    font-size: 20px;
     color: var(--white);
-    margin-top: 70px;
+    margin-top: 10px;
     margin-left: 100px;
     
 }
